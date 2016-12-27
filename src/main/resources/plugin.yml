@@ -1,0 +1,8 @@
+name: GameApi
+version: VERSION
+main: de.craften.plugins.gameapi.GameApi
+
+commands:
+  gamelist:
+    description: Shows a list of all registered games.
+    usage: /<command>
