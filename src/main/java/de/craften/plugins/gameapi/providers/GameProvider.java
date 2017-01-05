@@ -1,9 +1,8 @@
 package de.craften.plugins.gameapi.providers;
 
-import java.util.Optional;
 
 import de.craften.plugins.gameapi.GameApi;
-import de.craften.plugins.gameapi.providers.game.Game;
+import de.craften.plugins.gameapi.GameManager;
 
 public class GameProvider {
 
@@ -13,12 +12,8 @@ public class GameProvider {
 		this.plugin = plugin;
 	}
 	
-	public void registerGame(Game game) {
-		plugin.getGameManager().addGame(game);
+	public GameManager getGameManager() {
+		return plugin.getGameManager();
 	}
 	
-	public Optional<Game> getGame(String gameID) {
-		return plugin.getGameManager().getGame(gameID);
-	}
-
 }
